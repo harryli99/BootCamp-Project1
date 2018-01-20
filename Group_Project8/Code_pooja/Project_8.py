@@ -408,7 +408,7 @@ work_spread
 
 
 #Creating a pie chart showing working sectors of california
-colors = ["coral", "black", "purple", "lightgreen", "yellow"]
+colors = ["coral", "brown", "purple", "lightgreen", "yellow"]
 labels = ["Professional",  "Service", "Office",
           "Construction", "Production"]
 patches = plt.pie(work_spread, colors = colors, labels = labels, shadow = True, autopct='%1.2f%%')
@@ -515,7 +515,7 @@ employment_type_spread
 
 #Creating a pie chart showing commuter sectors of california
 colors = ["lightskyblue", "green", "yellow", "black", "red"]
-labels = [ "PrivateWorkers", "Public commuters", "SelfEmployers", "FamilyWorkers", 
+labels = [ "PrivateWorkers", "Public worker", "SelfEmployers", "FamilyWorkers", 
           "unemployed"]
 patches = plt.pie(employment_type_spread, colors = colors, labels = labels, shadow = True, autopct='%1.1f%%')
 
