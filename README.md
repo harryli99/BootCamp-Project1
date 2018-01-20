@@ -1,17 +1,16 @@
 # BootCamp-Project1
-Project title: Facebook Demographic analysis
+Project title: Census/BLS Data Dive
 
-Team members: Salom� B., Harry L. Julian A., Pooja B.
+Team members: Salomé B., Harry L. Julian A., Pooja B.
 
 Project Descriptions:
-Using the Facebook API dataset, we plan to collect data about the Facebook Users Demographics
+Using data available from the Census and Bureau of Labor Statistics, we took a look at various information about businesses, jobs, poverty, and California.
 
 Research Questions:
--is facebook declining in new users
--what kind of posts receive the most likes/responses
+-What’s the historical state of job growth across the US?
+-What are the most popular jobs and their associated incomes?
+-What impacts the poverty rate of the US?
+-How does California compare to these statistics?
 
 Data set to be used:
-Facebook  Graph API
-
-Rough Breakdown of tasks:
-Everyone- Getting Familiar with API, Cleaning data, Narrowing down questions by Monday
+Census API Datasets, Bureaur of Labor Statistics dataset
