@@ -217,7 +217,7 @@ plt.tight_layout()
 
 
 # Saves an image of our chart so that we can view it in a folder
-plt.savefig("Output_graphs/Pop_County_Bar.png")
+plt.savefig("Output_graphs_pooja/Pop_County_Bar.png")
 plt.show()
 
 
@@ -251,14 +251,14 @@ plt.ylim(0, max(Pop_without_LA)+0.1)
 plt.grid()
 #fig = plt.figure(1, [40, 40])
 #fig.autofmt_xdate()
-#plt.tight_layout()
+plt.tight_layout()
 
 
 # In[28]:
 
 
 # Saves an image of our chart so that we can view it in a folder - Taking LA out
-plt.savefig("Output_graphs/Pop_County_Bar_without LA.png")
+plt.savefig("Output_graphs_pooja/Pop_County_Bar_without LA.png")
 plt.show()
 
 
@@ -269,24 +269,24 @@ plt.show()
 x_axis = np.arange(58)
 tick_locations = [value+0.4 for value in x_axis]
 source = census_groupby_county_CA_df["FemaleToMaleRatio"]
-plt.figure(figsize=(20,2))
+plt.figure(figsize=(20,5))
 bar1 = plt.bar(x_axis, source, width = .5, align='center', alpha = 1, color = 'y')
 plt.xticks(tick_locations, census_groupby_county_CA_df["County"], rotation="vertical")
 plt.ylabel('Female to male ratio')
 plt.title('Female to male ratio across counties in California')
 plt.xlim(-1,60)
-plt.ylim(0, 1.1)
+plt.ylim(0, 1.15)
 plt.grid()
 #fig = plt.figure(1, [1.5, 10])
 #fig.autofmt_xdate()
-#plt.tight_layout()
+plt.tight_layout()
 
 
 # In[30]:
 
 
 # Saves an image of our chart so that we can view it in a folder
-plt.savefig("Output_graphs/FemaletoMale_County_Bar.png")
+plt.savefig("Output_graphs_pooja/FemaletoMale_County_Bar.png")
 plt.show()
 
 
@@ -318,8 +318,8 @@ race_spread = [total_Hispanic, total_Pacific, total_White, total_Asian, total_Bl
 
 #Creating a pie chart showing racial spread of california
 colors = ["coral", "black", "purple", "lightgreen", "yellow", "lightskyblue"]
-labels = ["Hispanic represented in Coral", "Pacific represented in Black", "White represented in Purple", "Asian represented in Green", "Black represented in yellow", "Native represented in Skyblue"]
-patches = plt.pie(race_spread, colors = colors, labels = labels, shadow = True, autopct='%1.2f%%')
+labels = ["Hispanic", "Pacific", "White", "Asian", "Black", "Native"]
+patches = plt.pie(race_spread, colors = colors, labels = labels, shadow = False, autopct='%1.2f%%')
 
 
 # In[33]:
@@ -327,7 +327,7 @@ patches = plt.pie(race_spread, colors = colors, labels = labels, shadow = True, 
 
 # Saves an image of our chart so that we can view it in a folder
 plt.title("Diversity spread of California")
-plt.savefig("Output_graphs/Diversity_CA.png")
+plt.savefig("Output_graphs_pooja/Diversity_CA.png")
 plt.show()
 
 
@@ -368,7 +368,8 @@ plt.ylabel("Mean Income in thousands")
 # Saves an image of our chart so that we can view it in a folder
 plt.title("Income spread of California")
 plt.grid()
-plt.savefig("Output_graphs/Income_CA.png")
+plt.tight_layout()
+plt.savefig("Output_graphs_pooja/Income_CA.png")
 plt.show()
 
 
@@ -408,8 +409,8 @@ work_spread
 
 #Creating a pie chart showing working sectors of california
 colors = ["coral", "black", "purple", "lightgreen", "yellow"]
-labels = ["Professional represented in Coral",  "Service represented in Black", "Office represented in purple",
-          "Construction represented in Lightgreen", "Production in represented Yellow"]
+labels = ["Professional",  "Service", "Office",
+          "Construction", "Production"]
 patches = plt.pie(work_spread, colors = colors, labels = labels, shadow = True, autopct='%1.2f%%')
 
 
@@ -418,7 +419,7 @@ patches = plt.pie(work_spread, colors = colors, labels = labels, shadow = True, 
 
 # Saves an image of our chart so that we can view it in a folder
 plt.title("Sectors where Californians work")
-plt.savefig("Output_graphs/WorkSectors_CA.png")
+plt.savefig("Output_graphs_pooja/WorkSectors_CA.png")
 plt.show()
 
 
@@ -462,10 +463,8 @@ commute_spread
 #Creating a pie chart showing commuter sectors of california
 #colors = ["red", "blue", "green", "yellow", "purple", "gray"]
 colors = ["coral", "gray", "purple", "lightgreen", "yellow", "lightskyblue"]
-labels = ["Drivers represented in Coral",  "Carpoolers represented in Gray", 
-          "Public commuters represented in Purple", "Walkers represented in Lightgreen", "Others represented in Yellow",
-          "Work@homers represented in Lightskyblue"]
-patches = plt.pie(commute_spread, colors = colors, labels = labels, shadow = True, autopct='%1.1f%%')
+labels = ["Drivers",  "Carpoolers", "Public commuters", "Walkers", "Others","Work@home"]
+patches = plt.pie(commute_spread, colors = colors, labels = labels, shadow = False, autopct='%1.1f%%')
 
 
 # In[42]:
@@ -473,7 +472,7 @@ patches = plt.pie(commute_spread, colors = colors, labels = labels, shadow = Tru
 
 # Saves an image of our chart so that we can view it in a folder
 plt.title("How do Californians commute to work")
-plt.savefig("Output_graphs/Commuters_CA.png")
+plt.savefig("Output_graphs_pooja/Commuters_CA.png")
 plt.show()
 
 
@@ -516,10 +515,9 @@ employment_type_spread
 
 #Creating a pie chart showing commuter sectors of california
 colors = ["lightskyblue", "green", "yellow", "black", "red"]
-labels = [ "total_PrivateWorkers represented in LightSkyBlue", "Public commuters represented in Green", 
-          "total_SelfEmployers represented in yellow", "total_FamilyWorkers represented in Black", 
-          "total_unemployed represented in Red"]
-patches = plt.pie(employment_type_spread, colors = colors, labels = labels, shadow = False, autopct='%1.1f%%')
+labels = [ "PrivateWorkers", "Public commuters", "SelfEmployers", "FamilyWorkers", 
+          "unemployed"]
+patches = plt.pie(employment_type_spread, colors = colors, labels = labels, shadow = True, autopct='%1.1f%%')
 
 
 # In[45]:
@@ -527,7 +525,7 @@ patches = plt.pie(employment_type_spread, colors = colors, labels = labels, shad
 
 # Saves an image of our chart so that we can view it in a folder
 plt.title("Employment status of Californians")
-plt.savefig("Output_graphs/employment_type_CA.png")
+plt.savefig("Output_graphs_pooja/employment_type_CA.png")
 plt.show()
 
 
@@ -590,10 +588,10 @@ plt.xlim(30, 110)
 plt.ylim(0, 4500000)
 plt.scatter(income_in_thousands, poverty_in_thousands, marker="o", facecolors="coral", edgecolors="black",
             s=2*income_in_thousands, alpha=0.75)
-#plt.tight_layout()
+plt.tight_layout()
 
 # Save the figure
-plt.savefig("Output_graphs/Income levels and Poverty.png")
+plt.savefig("Output_graphs_pooja/Income levels and Poverty.png")
 plt.show()
 
 
@@ -611,8 +609,9 @@ plt.ylabel("Poverty level in thousands removing one high outlier")
 ax.plot(income_in_thousands, fit[0] * income_in_thousands + fit[1], color='red')
 ax.scatter(income_in_thousands, poverty_in_thousands, marker="o", facecolors="coral", edgecolors="black",
             s=2*income_in_thousands, alpha=0.75)
+plt.tight_layout()
 # Save the figure
-plt.savefig("Output_graphs/Income levels and Poverty with a trend line.png")
+plt.savefig("Output_graphs_pooja/Income levels and Poverty with a trend line.png")
 # Show plot
 plt.show()
 
